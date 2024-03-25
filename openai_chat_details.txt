@@ -1,0 +1,681 @@
+LLM rompt:
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 238558
+  columns: 38
+  schema:
+    fields:
+    - name: Unique Key
+      type: int64
+      samples:
+      - 58597635
+      - 50160771
+      - 48597886
+    - name: Created Date
+      type: object
+      samples:
+      - 09/11/2020 02:52:53 PM
+      - 01/07/2023 12:46:23 PM
+      - 08/31/2023 05:05:37 AM
+    - name: Closed Date
+      type: object
+      samples:
+      - .nan
+      - 04/13/2018 02:54:36 PM
+      - 12/17/2015 10:00:55 AM
+    - name: Agency
+      type: object
+      samples:
+      - DOHMH
+      - DOHMH
+      - DOHMH
+    - name: Agency Name
+      type: object
+      samples:
+      - Department of Health and Mental Hygiene
+      - Department of Health and Mental Hygiene
+      - Department of Health and Mental Hygiene
+    - name: Complaint Type
+      type: object
+      samples:
+      - Rodent
+      - Rodent
+      - Rodent
+    - name: Descriptor
+      type: object
+      samples:
+      - Rat Sighting
+      - Rat Sighting
+      - Rat Sighting
+    - name: Location Type
+      type: object
+      samples:
+      - Hospital
+      - .nan
+      - Catch Basin/Sewer
+    - name: Incident Zip
+      type: float64
+      samples:
+      - 10013.0
+      - .nan
+      - 10455.0
+    - name: Incident Address
+      type: object
+      samples:
+      - 88 BAY    8 STREET
+      - .nan
+      - 200 WEST  136 STREET
+    - name: Street Name
+      type: object
+      samples:
+      - .nan
+      - WILLIAMBRG ST EAST
+      - HOWE STREET
+    - name: Cross Street 1
+      type: object
+      samples:
+      - GREENWOOD AVENUE PEDESTRIAN OVPS
+      - .nan
+      - FLOYD STREET
+    - name: Cross Street 2
+      type: object
+      samples:
+      - EAST  166 STREET
+      - AUBREY AVENUE
+      - .nan
+    - name: Intersection Street 1
+      type: object
+      samples:
+      - CAMBRIA STREET
+      - ST NICOLAS AVE
+      - .nan
+    - name: Intersection Street 2
+      type: object
+      samples:
+      - .nan
+      - HOMECREST AVENUE
+      - 144 PLACE
+    - name: Address Type
+      type: object
+      samples:
+      - .nan
+      - LATLONG
+      - BLOCKFACE
+    - name: City
+      type: object
+      samples:
+      - .nan
+      - CENTRAL PARK
+      - BROOKLYN
+    - name: Landmark
+      type: object
+      samples:
+      - 198 STREET
+      - .nan
+      - NORTHERN BOULEVARD
+    - name: Facility Type
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Status
+      type: object
+      samples:
+      - In Progress
+      - Unspecified
+      - Draft
+    - name: Due Date
+      type: object
+      samples:
+      - .nan
+      - 07/31/2017 06:26:22 AM
+      - 05/27/2010 02:25:53 PM
+    - name: Resolution Action Updated Date
+      type: object
+      samples:
+      - .nan
+      - 08/10/2018 02:29:44 PM
+      - 05/04/2022 09:31:34 PM
+    - name: Community Board
+      type: object
+      samples:
+      - 13 BROOKLYN
+      - .nan
+      - 08 MANHATTAN
+    - name: Borough
+      type: object
+      samples:
+      - .nan
+      - QUEENS
+      - BROOKLYN
+    - name: X Coordinate (State Plane)
+      type: float64
+      samples:
+      - .nan
+      - 1018930.0
+      - 1039674.0
+    - name: Y Coordinate (State Plane)
+      type: float64
+      samples:
+      - 192253.0
+      - .nan
+      - 187148.0
+    - name: Park Facility Name
+      type: object
+      samples:
+      - Unspecified
+      - Unspecified
+      - Unspecified
+    - name: Park Borough
+      type: object
+      samples:
+      - QUEENS
+      - .nan
+      - STATEN ISLAND
+    - name: Vehicle Type
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Taxi Company Borough
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Taxi Pick Up Location
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Bridge Highway Name
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Bridge Highway Direction
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Road Ramp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Bridge Highway Segment
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Latitude
+      type: float64
+      samples:
+      - 40.88707032549229
+      - 40.68008852991981
+      - .nan
+    - name: Longitude
+      type: float64
+      samples:
+      - .nan
+      - -73.96178338466348
+      - -73.97188695698276
+    - name: Location
+      type: object
+      samples:
+      - (40.68663916109698, -73.95350411733371)
+      - .nan
+      - (40.75891422608703, -73.90799382164786)
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Print plot number of incidents vs time
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+code:
+Message:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Filter out rows with missing Created Date values
+dfs[0] = dfs[0][dfs[0]['Created Date'].notnull()]
+
+# Convert 'Created Date' to datetime format
+dfs[0]['Created Date'] = pd.to_datetime(dfs[0]['Created Date'])
+
+# Group by date and count the number of incidents
+incidents_by_date = dfs[0].groupby(dfs[0]['Created Date'].dt.date).size()
+
+# Plot number of incidents vs time
+plt.figure(figsize=(12, 6))
+incidents_by_date.plot()
+plt.title('Number of Incidents Over Time')
+plt.xlabel('Date')
+plt.ylabel('Number of Incidents')
+plt.grid(True)
+plt.tight_layout()
+
+# Save the plot as png
+plt.savefig('number_of_incidents_over_time.png')
+
+# Declare result var
+result = { "type": "plot", "value": "number_of_incidents_over_time.png" }
+```
+
+LLM rompt:
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 238558
+  columns: 39
+  schema:
+    fields:
+    - name: Unique Key
+      type: int64
+      samples:
+      - 26582547
+      - 58225567
+      - 39377985
+    - name: Created Date
+      type: datetime64[ns]
+      samples:
+      - !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+        - 1566744071000000000
+        - null
+        - null
+        - 10
+      - !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+        - 1598208935000000000
+        - null
+        - null
+        - 10
+      - !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+        - 1705299881000000000
+        - null
+        - null
+        - 10
+    - name: Closed Date
+      type: object
+      samples:
+      - 01/25/2024 10:36:11 PM
+      - 03/24/2021 09:55:21 AM
+      - .nan
+    - name: Agency
+      type: object
+      samples:
+      - DOHMH
+      - DOHMH
+      - DOHMH
+    - name: Agency Name
+      type: object
+      samples:
+      - Department of Health and Mental Hygiene
+      - Department of Health and Mental Hygiene
+      - Department of Health and Mental Hygiene
+    - name: Complaint Type
+      type: object
+      samples:
+      - Rodent
+      - Rodent
+      - Rodent
+    - name: Descriptor
+      type: object
+      samples:
+      - Rat Sighting
+      - Rat Sighting
+      - Rat Sighting
+    - name: Location Type
+      type: object
+      samples:
+      - Residential Building
+      - Single Room Occupancy (SRO)
+      - .nan
+    - name: Incident Zip
+      type: float64
+      samples:
+      - 10314.0
+      - .nan
+      - 10306.0
+    - name: Incident Address
+      type: object
+      samples:
+      - 76 PALMETTO STREET
+      - .nan
+      - 604 WEST 47 STREET
+    - name: Street Name
+      type: object
+      samples:
+      - .nan
+      - WEST 89TH STREET
+      - BAY    8 STREET
+    - name: Cross Street 1
+      type: object
+      samples:
+      - BROWN AVENUE
+      - LA FORGE AVENUE
+      - .nan
+    - name: Cross Street 2
+      type: object
+      samples:
+      - .nan
+      - SHAUGHNESSY LANE
+      - BEACH  139 STREET
+    - name: Intersection Street 1
+      type: object
+      samples:
+      - ANKENER AVENUE
+      - NEREID AVENUE
+      - .nan
+    - name: Intersection Street 2
+      type: object
+      samples:
+      - EAST   72 STREET
+      - .nan
+      - SCRANTON STREET
+    - name: Address Type
+      type: object
+      samples:
+      - UNRECOGNIZED
+      - .nan
+      - BLOCKFACE
+    - name: City
+      type: object
+      samples:
+      - WHITESTONE
+      - ROSEDALE
+      - .nan
+    - name: Landmark
+      type: object
+      samples:
+      - 133 AVENUE
+      - .nan
+      - METROTECH CENTER
+    - name: Facility Type
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Status
+      type: object
+      samples:
+      - Assigned
+      - Closed
+      - Open
+    - name: Due Date
+      type: object
+      samples:
+      - 07/23/2019 10:54:31 AM
+      - 12/25/2015 04:14:10 PM
+      - .nan
+    - name: Resolution Action Updated Date
+      type: object
+      samples:
+      - 01/25/2023 08:52:34 AM
+      - .nan
+      - 01/06/2022 10:53:42 AM
+    - name: Community Board
+      type: object
+      samples:
+      - 02 STATEN ISLAND
+      - 12 BROOKLYN
+      - .nan
+    - name: Borough
+      type: object
+      samples:
+      - QUEENS
+      - .nan
+      - BRONX
+    - name: X Coordinate (State Plane)
+      type: float64
+      samples:
+      - 1002928.0
+      - 1007092.0
+      - .nan
+    - name: Y Coordinate (State Plane)
+      type: float64
+      samples:
+      - 202445.0
+      - 215515.0
+      - .nan
+    - name: Park Facility Name
+      type: object
+      samples:
+      - Unspecified
+      - Unspecified
+      - Unspecified
+    - name: Park Borough
+      type: object
+      samples:
+      - Unspecified
+      - MANHATTAN
+      - .nan
+    - name: Vehicle Type
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Taxi Company Borough
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Taxi Pick Up Location
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Bridge Highway Name
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Bridge Highway Direction
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Road Ramp
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Bridge Highway Segment
+      type: float64
+      samples:
+      - .nan
+      - .nan
+      - .nan
+    - name: Latitude
+      type: float64
+      samples:
+      - 40.628471237893095
+      - 40.84936119853963
+      - .nan
+    - name: Longitude
+      type: object
+      samples:
+      - '1660983475'
+      - '5207919991'
+      - '8728550824'
+    - name: Location
+      type: object
+      samples:
+      - (40.65089957380018, -73.94749266230919)
+      - .nan
+      - (40.736848341850404, -73.87254601747946)
+    - name: YearMonth
+      type: period[M]
+      samples:
+      - !!python/object/apply:pandas._libs.tslibs.period.Period
+        - null
+        - &id001 !!python/object/apply:pandas._libs.tslibs.offsets.MonthEnd
+          - 1
+          - false
+        - 585
+      - !!python/object/apply:pandas._libs.tslibs.period.Period
+        - null
+        - *id001
+        - 497
+      - !!python/object/apply:pandas._libs.tslibs.period.Period
+        - null
+        - *id001
+        - 488
+
+
+The user asked the following question:
+### QUERY
+ Every day at 6 PM I walk from Washington Square Park to Chelsea Park.  I walk at 3 miles per hour. Please provide me a route that minimizes the number of rat sightings that occured on any day in the past within 10 minutes of the same time of time that I would walk by the location of the sighting on my evening walk. The route must be under 3 miles.
+
+You generated this python code:
+# TODO: import the required dependencies
+import pandas as pd
+from geopy.distance import geodesic
+
+# Calculate distance between two points
+def calculate_distance(lat1, lon1, lat2, lon2):
+    coords_1 = (lat1, lon1)
+    coords_2 = (lat2, lon2)
+    return geodesic(coords_1, coords_2).miles
+
+# Filter rat sightings within 10 minutes of 6 PM
+def filter_rat_sightings(df):
+    rat_sightings = df[(df['Complaint Type'] == 'Rodent') & (df['Descriptor'] == 'Rat Sighting')]
+    rat_sightings['Created Date'] = pd.to_datetime(rat_sightings['Created Date'])
+    rat_sightings['Time'] = rat_sightings['Created Date'].dt.time
+    rat_sightings_nearby = rat_sightings[(rat_sightings['Time'] >= pd.Timestamp('18:00:00').time()) & 
+                                         (rat_sightings['Time'] <= pd.Timestamp('18:10:00').time())]
+    return rat_sightings_nearby
+
+# Calculate the route with minimum rat sightings
+def calculate_min_rat_route(park1_lat, park1_lon, park2_lat, park2_lon, rat_sightings_df):
+    min_distance = float('inf')
+    min_route = None
+    for df in rat_sightings_df:
+        for index, row in df.iterrows():
+            distance_park1 = calculate_distance(park1_lat, park1_lon, row['Latitude'], row['Longitude'])
+            distance_park2 = calculate_distance(park2_lat, park2_lon, row['Latitude'], row['Longitude'])
+            total_distance = distance_park1 + distance_park2
+            if total_distance < min_distance and total_distance < 3:
+                min_distance = total_distance
+                min_route = (row['Latitude'], row['Longitude'])
+    return min_route
+
+# Filter rat sightings within 10 minutes of 6 PM
+filtered_rat_sightings = [filter_rat_sightings(df) for df in dfs]
+
+# Washington Square Park coordinates
+washington_square_park = (40.730823, -73.997332)
+
+# Chelsea Park coordinates
+chelsea_park = (40.746500, -74.001374)
+
+# Calculate the route with minimum rat sightings
+min_route = calculate_min_rat_route(washington_square_park[0], washington_square_park[1], chelsea_park[0], chelsea_park[1], filtered_rat_sightings)
+
+result = {"type": "string", "value": f"The route with minimum rat sightings is at coordinates: {min_route}"}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "/Users/rolandbennett/.pyenv/versions/miniforge3-23.3.1-1/envs/Xarray/lib/python3.10/site-packages/pandasai/pipelines/chat/code_execution.py", line 64, in execute
+    result = code_manager.execute_code(code_to_run, code_context)
+  File "/Users/rolandbennett/.pyenv/versions/miniforge3-23.3.1-1/envs/Xarray/lib/python3.10/site-packages/pandasai/helpers/code_manager.py", line 181, in execute_code
+    code_to_run = self._clean_code(code, context)
+  File "/Users/rolandbennett/.pyenv/versions/miniforge3-23.3.1-1/envs/Xarray/lib/python3.10/site-packages/pandasai/helpers/code_manager.py", line 520, in _clean_code
+    self._check_imports(node)
+  File "/Users/rolandbennett/.pyenv/versions/miniforge3-23.3.1-1/envs/Xarray/lib/python3.10/site-packages/pandasai/helpers/code_manager.py", line 611, in _check_imports
+    raise BadImportError(library)
+pandasai.exceptions.BadImportError: Generated code includes import of geopy which is not in whitelist.
+
+
+Fix the python code above and return the new python code:
+code:
+Message:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Calculate distance between two points
+def calculate_distance(lat1, lon1, lat2, lon2):
+    lat_lon_1 = (lat1, lon1)
+    lat_lon_2 = (lat2, lon2)
+    return geopy.distance.distance(lat_lon_1, lat_lon_2).miles
+
+# Filter rat sightings within 10 minutes of 6 PM
+def filter_rat_sightings(df):
+    rat_sightings = df[(df['Complaint Type'] == 'Rodent') & (df['Descriptor'] == 'Rat Sighting')]
+    rat_sightings['Created Date'] = pd.to_datetime(rat_sightings['Created Date'])
+    rat_sightings['Time'] = rat_sightings['Created Date'].dt.time
+    rat_sightings_nearby = rat_sightings[(rat_sightings['Time'] >= pd.Timestamp('18:00:00').time()) & 
+                                         (rat_sightings['Time'] <= pd.Timestamp('18:10:00').time())]
+    return rat_sightings_nearby
+
+# Calculate the route with minimum rat sightings
+def calculate_min_rat_route(park1_lat, park1_lon, park2_lat, park2_lon, rat_sightings_df):
+    min_distance = float('inf')
+    min_route = None
+    for df in rat_sightings_df:
+        for index, row in df.iterrows():
+            distance_park1 = calculate_distance(park1_lat, park1_lon, row['Latitude'], row['Longitude'])
+            distance_park2 = calculate_distance(park2_lat, park2_lon, row['Latitude'], row['Longitude'])
+            total_distance = distance_park1 + distance_park2
+            if total_distance < min_distance and total_distance < 3:
+                min_distance = total_distance
+                min_route = (row['Latitude'], row['Longitude'])
+    return min_route
+
+# Filter rat sightings within 10 minutes of 6 PM
+filtered_rat_sightings = [filter_rat_sightings(df) for df in dfs]
+
+# Washington Square Park coordinates
+washington_square_park = (40.730823, -73.997332)
+
+# Chelsea Park coordinates
+chelsea_park = (40.746500, -74.001374)
+
+# Calculate the route with minimum rat sightings
+min_route = calculate_min_rat_route(washington_square_park[0], washington_square_park[1], chelsea_park[0], chelsea_park[1], filtered_rat_sightings)
+
+result = {"type": "string", "value": f"The route with minimum rat sightings is at coordinates: {min_route}"}
+
